@@ -12,4 +12,4 @@ function LifeDrainAbility:activate(player)
 	-- Implement the logic for life drain here
 end
 
-return LifeDrainAbility
+return LifeDrainAbilitya
