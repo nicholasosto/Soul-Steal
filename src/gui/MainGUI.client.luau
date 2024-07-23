@@ -51,11 +51,17 @@ exitButton.Parent = mainMenuFrame
 -- Play Button Functionality
 playButton.MouseButton1Click:Connect(function()
     print("Play button clicked!")
-    -- Add your play game functionality here
+    -- Example functionality: hide the main menu and start the game
+    mainMenuFrame.Visible = false
+    -- Insert your game starting code here
+    -- For example: game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
 end)
 
 -- Exit Button Functionality
 exitButton.MouseButton1Click:Connect(function()
     print("Exit button clicked!")
-    -- Add your exit game functionality here
+    -- Example functionality: close the UI
+    screenGui:Destroy()
+    -- Optionally, you can add code to end the game or kick the player
+    -- For example: game.Players.LocalPlayer:Kick("You have exited the game.")
 end)

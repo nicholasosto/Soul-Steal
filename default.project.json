@@ -6,34 +6,72 @@
     "ReplicatedStorage": {
       "Shared": {
         "$path": "src/shared"
+      },
+      "Setup":{
+        "$path": "src/setup"
+      },
+      "RemoteEvents": {
+        "$className": "Folder",
+        "LifeDrain": {
+          "$className": "RemoteEvent"
+        },
+        "MagicShield": {
+          "$className": "RemoteEvent"
+        },
+        "Necromancy": {
+          "$className": "RemoteEvent"
+        },
+        "NightVision": {
+          "$className": "RemoteEvent"
+        },
+        "RaceSelected": {
+          "$className": "RemoteEvent"
+        }
       }
     },
+
     "StarterGui": {
+      "$className": "StarterGui",
       "Gui": {
+        "$className": "Folder",
         "$path": "src/gui"
       }
     },
+
     "ServerScriptService": {
+      "$className": "ServerScriptService",
       "Server": {
         "$path": "src/server"
       },
-      "Races":{
+      "Races": {
+        "$className": "Folder",
         "$path": "src/Races"
       },
-      "Abilities":{
+      "Abilities": {
+        "$className": "Folder",
         "$path": "src/Abilities"
       }
     },
 
     "StarterPlayer": {
+      "$className": "StarterPlayer",
       "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
         "Client": {
           "$path": "src/client"
+        }
+      },
+      "StarterCharacterScripts": {
+        "$className": "StarterCharacterScripts",
+        "CharacterSetup": {
+          "$className": "Folder",
+          "$path": "src/character_setup"
         }
       }
     },
 
     "Workspace": {
+      "$className": "Workspace",
       "$properties": {
         "FilteringEnabled": true
       },
@@ -58,9 +96,15 @@
             512
           ]
         }
+      },
+      "NPCs": {
+        "$className": "Folder",
+        "$path": "src/npcs"
       }
     },
+
     "Lighting": {
+      "$className": "Lighting",
       "$properties": {
         "Ambient": [
           0,
@@ -73,7 +117,9 @@
         "Technology": "Voxel"
       }
     },
+
     "SoundService": {
+      "$className": "SoundService",
       "$properties": {
         "RespectFilteringEnabled": true
       }

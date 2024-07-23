@@ -1,0 +1,128 @@
+{
+    "name": "Soul Steal",
+    "tree": {
+      "$className": "DataModel",
+  
+      "ReplicatedStorage": {
+        "$className": "Folder",
+        "Shared": {
+          "$className": "Folder",
+          "$path": "src/shared"
+        },
+        "RemoteEvents": {
+          "$className": "Folder",
+          "LifeDrain": {
+            "$className": "RemoteEvent"
+          },
+          "MagicShield": {
+            "$className": "RemoteEvent"
+          },
+          "Necromancy": {
+            "$className": "RemoteEvent"
+          },
+          "NightVision": {
+            "$className": "RemoteEvent"
+          },
+          "RaceSelected": {
+            "$className": "RemoteEvent"
+          }
+        }
+      },
+  
+      "StarterGui": {
+        "$className": "StarterGui",
+        "Gui": {
+          "$className": "Folder",
+          "$path": "src/gui"
+        }
+      },
+  
+      "ServerScriptService": {
+        "$className": "ServerScriptService",
+        "Server": {
+          "$path": "src/server"
+        },
+        "Races": {
+          "$className": "Folder",
+          "$path": "src/Races"
+        },
+        "Abilities": {
+          "$className": "Folder",
+          "$path": "src/Abilities"
+        }
+      },
+  
+      "StarterPlayer": {
+        "$className": "StarterPlayer",
+        "StarterPlayerScripts": {
+          "$className": "StarterPlayerScripts",
+          "Client": {
+            "$path": "src/client"
+          }
+        },
+        "StarterCharacterScripts": {
+          "$className": "StarterCharacterScripts",
+          "CharacterSetup": {
+            "$className": "Folder",
+            "$path": "src/character_setup"
+          }
+        }
+      },
+  
+      "Workspace": {
+        "$className": "Workspace",
+        "$properties": {
+          "FilteringEnabled": true
+        },
+        "Baseplate": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [
+              0.38823,
+              0.37254,
+              0.38823
+            ],
+            "Locked": true,
+            "Position": [
+              0,
+              -10,
+              0
+            ],
+            "Size": [
+              512,
+              20,
+              512
+            ]
+          }
+        },
+        "NPCs": {
+          "$className": "Folder",
+          "$path": "src/npcs"
+        }
+      },
+  
+      "Lighting": {
+        "$className": "Lighting",
+        "$properties": {
+          "Ambient": [
+            0,
+            0,
+            0
+          ],
+          "Brightness": 2,
+          "GlobalShadows": true,
+          "Outlines": false,
+          "Technology": "Voxel"
+        }
+      },
+  
+      "SoundService": {
+        "$className": "SoundService",
+        "$properties": {
+          "RespectFilteringEnabled": true
+        }
+      }
+    }
+  }
+  

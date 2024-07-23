@@ -1,15 +1,28 @@
--- NightVisionAbility.luau 
-local Ability = require(game.ServerScriptService.Abilities.AbilityBase)
+-- File: ServerScriptService > NightVisionServerScript
 
-local NightVisionAbility = setmetatable({}, {__index = Ability})
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Lighting = game:GetService("Lighting")
 
-function NightVisionAbility:new()
-	return Ability.new(self, "Night Vision")
+local nightVisionToggle = ReplicatedStorage:WaitForChild("NightVisionToggle")
+
+-- Default lighting settings
+local originalBrightness = Lighting.Brightness
+local originalAmbient = Lighting.Ambient
+
+-- Night vision lighting settings
+local nightVisionBrightness = 2
+local nightVisionAmbient = Color3.new(0, 1, 0) -- Green tint for night vision
+
+-- Function to apply night vision
+local function applyNightVision(player, enabled)
+    if enabled then
+        Lighting.Brightness = nightVisionBrightness
+        Lighting.Ambient = nightVisionAmbient
+    else
+        Lighting.Brightness = originalBrightness
+        Lighting.Ambient = originalAmbient
+    end
 end
 
-function NightVisionAbility:activate(player)
-	print(player.Name .. " activated Night Vision!")
-	-- Implement the logic for night vision here
-end
-
-return NightVisionAbility
+-- Listen for night vision toggle requests
+nightVisionToggle.OnServerEvent:Connect(applyNightVision)
