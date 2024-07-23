@@ -8,10 +8,20 @@
         "$path": "src/shared"
       }
     },
-
+    "StarterGui": {
+      "Gui": {
+        "$path": "src/gui"
+      }
+    },
     "ServerScriptService": {
       "Server": {
         "$path": "src/server"
+      },
+      "Races":{
+        "$path": "src/Races"
+      },
+      "Abilities":{
+        "$path": "src/Abilities"
       }
     },
 

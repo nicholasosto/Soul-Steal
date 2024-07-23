@@ -1,0 +1,14 @@
+Best practices: https://devforum.roblox.com/t/designing-ui-tips-and-best-practices/3074034
+
+UI Documentation: 
+1 - https://create.roblox.com/docs/ui
+2- https://create.roblox.com/docs/ui/on-screen-containers
+3 - https://create.roblox.com/docs/ui/in-experience-containers
+
+Class Documentation:
+1 - Labels - https://create.roblox.com/docs/ui/labels
+2 - Buttons - https://create.roblox.com/docs/ui/buttons
+3 - Frames - https://create.roblox.com/docs/ui/frames
+4 - Text Input - https://create.roblox.com/docs/ui/text-input
+5 - Video Frames - https://create.roblox.com/docs/ui/video-frames
+6 - 2D Paths - https://create.roblox.com/docs/ui/2D-paths

@@ -1,0 +1,31 @@
+ScreenGui
+
+Description: The root class for all GUI elements displayed on the screen. It serves as a container for all other UI elements and must be a descendant of a PlayerGui to be visible.
+Frame
+
+Description: A basic container used to hold and organize other UI elements. Frames can be used to create panels, backgrounds, and other static elements.
+TextLabel
+
+Description: Used to display non-interactive text on the screen. TextLabels can be styled with different fonts, sizes, colors, and alignment options.
+TextButton
+
+Description: Similar to a TextLabel, but interactive. TextButtons can be clicked to trigger various actions or events.
+ImageLabel
+
+Description: Used to display non-interactive images. ImageLabels can be used for backgrounds, icons, and other decorative elements.
+ImageButton
+
+Description: Similar to an ImageLabel, but interactive. ImageButtons can be clicked and are often used for icons, buttons, and other interactive elements.
+ScrollingFrame
+
+Description: A container that allows for scrolling its contents. Useful for creating scrollable lists, menus, and other content that doesn't fit within a single screen view.
+TextBox
+
+Description: An interactive UI element that allows users to input text. TextBoxes are commonly used for chat interfaces, search bars, and forms.
+ViewportFrame
+
+Description: Allows rendering of 3D objects within a 2D UI. This is useful for displaying 3D previews, models, and other 3D content in the GUI.
+UIListLayout
+
+Description: A layout object used to arrange GUI elements in a vertical or horizontal list. It helps in organizing UI elements dynamically within a container.
+These classes form the foundation of creating user interfaces in Roblox, providing a wide range of functionalities for designing and implementing various interactive and static UI components.

@@ -1,4 +1,4 @@
--- NightVisionAbility.lua
+-- NightVisionAbility.luau 
 local Ability = require(game.ServerScriptService.Abilities.AbilityBase)
 
 local NightVisionAbility = setmetatable({}, {__index = Ability})
