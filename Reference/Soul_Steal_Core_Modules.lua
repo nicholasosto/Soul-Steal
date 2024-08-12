@@ -1,4 +1,4 @@
-
+--[[
 -- HealthSystem.lua
 local HealthSystem = {}
 
@@ -101,3 +101,4 @@ function EnvironmentSetup.initialize()
 end
 
 return EnvironmentSetup
+]]--

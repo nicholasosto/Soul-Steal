@@ -1,3 +1,4 @@
+--[[
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RemoteEvents = ReplicatedStorage:WaitForChild("RemoteEvents")
 local StarterGui = game:GetService("StarterGui")
@@ -8,10 +9,12 @@ local function initializeGUI()
     -- Set up health bar and other UI elements
     local healthBar = HealthBar.new()
     healthBar.Parent = StarterGui
+    print("GUI initialized!")
 end
 
 local function onCharacterAdded(character)
     -- Initialize character abilities and UI elements
+    print("Character added!")
     initializeGUI()
     character.Humanoid.HealthChanged:Connect(function(health)
         HealthBar.update(health, character.Humanoid.MaxHealth)
@@ -20,13 +23,14 @@ end
 
 local function onPlayerAdded(player)
     player.CharacterAdded:Connect(onCharacterAdded)
-    -- Load additional player-specific settings if needed
+    print(player.Name .. " has joined the game!")
 end
 
 game.Players.PlayerAdded:Connect(onPlayerAdded)
 
 local function onLifeDrain()
-    -- Implement client-side logic for LifeDrain
+    print("Life drained!")
 end
 
 RemoteEvents.LifeDrain.OnClientEvent:Connect(onLifeDrain)
+]]--

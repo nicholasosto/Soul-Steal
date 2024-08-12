@@ -1,35 +1,39 @@
+--[[	
+	File: GameServer.lua
+	Location: ServerScripts-> PlayerData
+	Last Update: 04-2024
+	Author: @TrembusTech
+]]--
+
+-- GS: Players
 local Players = game:GetService("Players")
+
+-- GS: Filestores
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local RemoteEvents = ReplicatedStorage:WaitForChild("RemoteEvents")
+local ServerScripts = game:GetService("ServerScriptService")
 
-local HealthSystem = require(game.ReplicatedStorage.Shared:WaitForChild("HealthSystem"))
-local EnvironmentSetup = require(game.ReplicatedStorage.Setup:WaitForChild("EnvironmentSetup"))
+-- Event Pack
+local EventPack = ReplicatedStorage:WaitForChild("Event_Pack")
 
--- Initialize environment
-EnvironmentSetup.initialize()
+-- Datastore
+local DataFolder = ServerScripts:WaitForChild("DataService")
+local SuphiDS = require(DataFolder:WaitForChild("SuphiDS"))
+local Templates = require(game.ServerScriptService.DataService:WaitForChild("DataTemplate"))
 
-local function onPlayerAdded(player)
-    -- Set up player character and initial health
-    player.CharacterAdded:Connect(function(character)
-        local humanoid = character:WaitForChild("Humanoid")
-        humanoid.Health = 100
-        humanoid.MaxHealth = 100
-        -- Additional setup for character abilities and UI can go here
-    end)
+-- Child Modules
+local PlayerJoining = require(script.PlayerJoining)
+--local SkillHandler = require(script.SkillHandler)
+
+EventPack.ActivateSkill.onServerEvent:Connect(function(player, skill)
+
+    local myDataStore = SuphiDS.find(Templates.DatabaseName, player.UserId)
+
+    while myDataStore.State == false do
+       print("Data Loading...")
+        task.wait(5)
+    end
     
-    -- Load player data if applicable
-end
+    myDataStore.Value.Attributes.AttributePoints += 2
+    player.leaderstats.AttributePoints.Value = myDataStore.Value.Attributes.AttributePoints
+end)
 
-local function onPlayerRemoving(player)
-    -- Save player data if applicable
-end
-
-Players.PlayerAdded:Connect(onPlayerAdded)
-Players.PlayerRemoving:Connect(onPlayerRemoving)
-
-local function onLifeDrain(player, target)
-    HealthSystem.reduceHealth(target, 10)
-    HealthSystem.increaseHealth(player.Character, 10, player.Character.MaxHealth)
-end
-
-RemoteEvents.LifeDrain.OnServerEvent:Connect(onLifeDrain)

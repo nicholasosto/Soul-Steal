@@ -7,7 +7,7 @@
       "Shared": {
         "$path": "src/shared"
       },
-      "Setup":{
+      "Setup": {
         "$path": "src/setup"
       },
       "RemoteEvents": {
@@ -25,6 +25,57 @@
           "$className": "RemoteEvent"
         },
         "RaceSelected": {
+          "$className": "RemoteEvent"
+        },
+        "DamagePlayer": {
+          "$className": "RemoteEvent"
+        },
+        "HealPlayer": {
+          "$className": "RemoteEvent"
+        },
+        "InitiateSoulSteal": {
+          "$className": "RemoteEvent"
+        },
+        "CompleteSoulSteal": {
+          "$className": "RemoteEvent"
+        },
+        "SoulStealFailed": {
+          "$className": "RemoteEvent"
+        },
+        "GainExperience": {
+          "$className": "RemoteEvent"
+        },
+        "LevelUp": {
+          "$className": "RemoteEvent"
+        },
+        "InteractWithNPC": {
+          "$className": "RemoteEvent"
+        },
+        "DamageNPC": {
+          "$className": "RemoteEvent"
+        },
+        "NPCHarvestSoul": {
+          "$className": "RemoteEvent"
+        },
+        "ShowNotification": {
+          "$className": "RemoteEvent"
+        },
+        "UpdateUI": {
+          "$className": "RemoteEvent"
+        },
+        "UseAbility": {
+          "$className": "RemoteEvent"
+        },
+        "ActivateBeam": {
+          "$className": "RemoteEvent"
+        },
+        "PlayerJoined": {
+          "$className": "RemoteEvent"
+        },
+        "PlayerLeft": {
+          "$className": "RemoteEvent"
+        },
+        "ChatMessage": {
           "$className": "RemoteEvent"
         }
       }
@@ -47,9 +98,13 @@
         "$className": "Folder",
         "$path": "src/Races"
       },
-      "Abilities": {
+      "Skills": {
         "$className": "Folder",
-        "$path": "src/Abilities"
+        "$path": "src/Skills"
+      },
+      "DataService":{
+        "$className": "Folder",
+        "$path": "src/DataService"
       }
     },
 
@@ -59,7 +114,11 @@
         "$className": "StarterPlayerScripts",
         "Client": {
           "$path": "src/client"
-        }
+        },
+        "leaderstats": {
+          "$className": "Folder",
+        "$path": "src/leaderstats"
+      }
       },
       "StarterCharacterScripts": {
         "$className": "StarterCharacterScripts",
@@ -85,10 +144,7 @@
             0.38823
           ],
           "Locked": true,
-          "Position": [
-            0,
-            -10,
-            0
+          "Position": [ 0,          -10,        0
           ],
           "Size": [
             512,

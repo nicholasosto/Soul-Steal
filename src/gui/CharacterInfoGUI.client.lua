@@ -36,7 +36,7 @@ for i, ability in ipairs(abilities) do
 
     button.MouseButton1Click:Connect(function()
         -- Here you can require and activate the ability script
-        local abilityScript = require(game.ReplicatedStorage.RemoteEvents:WaitForChild(ability.script))
+        local abilityScript = require(game.ReplicatedStorage.RemoteEvents:WaitForChild("UseAbility"))
         abilityScript:Activate(player)
     end)
 end

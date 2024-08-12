@@ -1,0 +1,15 @@
+{
+    "Base": {
+      "$className": "Part",
+      "$properties": {
+        "Anchored": true,
+        "Size": [100, 1, 100],
+        "Color": [0.4, 0.3, 0.2],
+        "CFrame": {
+          "$type": "CFrame",
+          "Position": [0, 0, 0],
+          "Orientation": [0, 0, 0]
+        }
+      }
+    }
+  }

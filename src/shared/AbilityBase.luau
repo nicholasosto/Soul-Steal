@@ -8,7 +8,8 @@ function AbilityBase.new()
 end
 
 function AbilityBase:activate()
-    -- Implement activation logic
+    print("Activating ability")
+    return true
 end
 
 function AbilityBase:deactivate()
